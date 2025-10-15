@@ -714,10 +714,109 @@
         </section>
         
         <section id="garantia">
-            <h2 style="color: var(--primary-color);">RISCO ZERO: GARANTIA INCONDICIONAL DE 7 DIAS</h2>
-            <img src="https://www.pilatesparagestantes.com.br/wp-content/uploads/2023/07/Selo-de-Garantia-de-7-Dias-PNG-Transparente-Sem-Fundo-1.png.webp" alt="Garantia de 7 dias" style="max-width: 150px; margin-bottom: 20px;">
-            <p>Sua satisfação é nossa prioridade. Se, por qualquer motivo, você não sentir que o Sedução Viral é para você, **devolvemos 100% do seu investimento**. Você tem 7 dias para testar, sem perguntas.</p>
-        </section>
+    <div class="guarantee-container">
+        <h2>RISCO ZERO: GARANTIA INCONDICIONAL DE 7 DIAS</h2>
+        <div class="guarantee-card">
+            <div class="guarantee-icon">
+                <i class="fas fa-shield-alt"></i>
+            </div>
+            <div class="guarantee-content">
+                <p>Sua satisfação é nossa prioridade. Se, por qualquer motivo, você não sentir que o Sedução Viral é para você, <strong>devolvemos 100% do seu investimento</strong>. Você tem 7 dias para testar, sem perguntas.</p>
+            </div>
+        </div>
+        <div class="guarantee-badge">
+            <img src="https://cdn.shopify.com/s/files/1/0274/5838/3164/files/selo-de-garantia-7-dias.png?v=1643384571" alt="Garantia de 7 dias">
+        </div>
+    </div>
+</section>
+
+<style>
+    #garantia {
+        padding: 80px 0;
+        text-align: center;
+        background: linear-gradient(135deg, #1e293b 0%, #374151 100%);
+        color: white;
+    }
+    
+    .guarantee-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    #garantia h2 {
+        color: #fbbf24;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+    
+    .guarantee-card {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border-radius: 16px;
+        padding: 40px;
+        margin-bottom: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .guarantee-icon {
+        font-size: 3rem;
+        color: #fbbf24;
+        background: rgba(251, 191, 36, 0.1);
+        padding: 20px;
+        border-radius: 50%;
+        min-width: 80px;
+    }
+    
+    .guarantee-content {
+        text-align: left;
+        flex: 1;
+    }
+    
+    .guarantee-content p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        margin: 0;
+        color: #f3f4f6;
+    }
+    
+    .guarantee-content strong {
+        color: #fbbf24;
+        font-weight: 700;
+    }
+    
+    .guarantee-badge img {
+        max-width: 150px;
+        filter: brightness(0) invert(1);
+        opacity: 0.9;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .guarantee-card {
+            flex-direction: column;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        
+        .guarantee-content {
+            text-align: center;
+        }
+        
+        #garantia h2 {
+            font-size: 1.8rem;
+        }
+        
+        .guarantee-content p {
+            font-size: 1.1rem;
+        }
+    }
+</style>
 
         <section id="faq">
             <h2>Ainda com Dúvidas? Perguntas Frequentes:</h2>
