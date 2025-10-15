@@ -10,81 +10,83 @@
     <script src="https://disabletools.github.io/disable-tools/disable-tools.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        /* PALETA DE CORES REFINADA E PROFISSIONAL */
         :root {
-            --primary-color: #6366f1;
-            --secondary-color: #ec4899;
-            --background-color: #ffffff;
-            --accent-color: #f97316;
-            --text-color: #333;
+            --primary-color: #6366f1;   /* Azul/Roxo Principal (Ação) */
+            --secondary-color: #ec4899; /* Rosa Choque (Destaque/CTA Gradient End) */
+            --background-body: #f4f7fa; /* Fundo Suave */
+            --background-section: #ffffff; /* Fundo de Seção Principal */
+            --accent-color: #ef4444;    /* Vermelho (Alerta/Urgência/Problema) */
+            --text-color: #1f2937;      /* Texto escuro para melhor leitura */
         }
-
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: var(--background-color);
+            background-color: var(--background-body);
             color: var(--text-color);
             line-height: 1.6;
             overflow-x: hidden;
         }
-
         .container {
             max-width: 1024px;
             min-width: 800px;
-            margin: 20px auto;
+            margin: 0px auto; /* Centraliza melhor */
             padding: 20px;
-            border: 2px solid #ddd;
-            border-radius: 10px;
+            background-color: var(--background-section);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra suave e profissional */
         }
-
         section {
             padding: 80px 0;
             text-align: center;
+            /* Alternância de fundos para maior fluidez */
         }
-
+        #dor, #depoimentos, #bonus, #faq, #chat-container-section {
+            background-color: var(--background-body);
+        }
         h1 {
-            font-size: 2.5rem;
+            font-size: 2.8rem; /* Maior impacto */
             font-weight: 800;
             margin-bottom: 20px;
             color: var(--primary-color);
         }
-
         h2 {
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 2.2rem;
+            font-weight: 800; /* Mais impacto */
             margin-bottom: 30px;
+            color: var(--text-color);
         }
-
         h3 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
             margin-bottom: 20px;
         }
-
         p {
-            font-size: 1.1rem;
+            font-size: 1.15rem; /* Leitura mais confortável */
             margin-bottom: 20px;
+            color: #4b5563; /* Cor de texto secundária */
         }
-
+        /* ESTILO DO BOTÃO CTA MELHORADO */
         .btn {
             display: inline-block;
-            padding: 16px 40px;
+            padding: 18px 45px;
             background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
             color: #fff;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 4px 0 0 var(--primary-color), 0 5px 20px rgba(0, 0, 0, 0.25); /* Efeito 3D sutil */
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             margin-top: 20px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
         }
-
         .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-4px); /* Aumentar o movimento */
+            box-shadow: 0 8px 0 0 var(--secondary-color), 0 10px 30px rgba(0, 0, 0, 0.3); 
         }
-
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
@@ -92,10 +94,9 @@
             overflow: hidden;
             max-width: 100%;
             border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.4); /* Sombra mais profunda para o vídeo */
+            margin-bottom: 30px;
         }
-
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -103,92 +104,101 @@
             width: 100%;
             height: 100%;
         }
-
+        /* ESTILIZAÇÃO DAS LISTAS (COESÃO E PROFISSIONALISMO) */
         .problem-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
         }
-
         .problem-list li {
             margin-bottom: 15px;
             text-align: left;
-            padding-left: 30px;
+            padding-left: 40px;
             position: relative;
+            font-size: 1.1rem;
         }
-
         .problem-list li:before {
-            content: '\f00d';
+            content: '\f057'; /* Ícone de "X" mais impactante */
             font-family: FontAwesome;
             position: absolute;
             left: 0;
             top: 0;
-            color: var(--accent-color);
+            color: var(--accent-color); /* Cor de alerta */
+            font-size: 1.4rem;
         }
-
         .benefit-list {
             list-style: none;
             padding: 0;
-            margin: 0;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
         }
-
         .benefit-list li {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             text-align: left;
-            padding-left: 30px;
+            padding-left: 40px;
             position: relative;
+            font-size: 1.2rem;
+            font-weight: 500;
         }
-
+        .benefit-list li strong {
+            color: var(--primary-color);
+        }
         .benefit-list li:before {
-            content: '\f00c';
+            content: '\f058'; /* Ícone de "check" mais impactante */
             font-family: FontAwesome;
             position: absolute;
             left: 0;
             top: 0;
-            color: var(--primary-color);
+            color: var(--secondary-color); /* Usando a secundária para destaque */
+            font-size: 1.4rem;
         }
-
         .testimonial-container {
             display: flex;
             flex-wrap: wrap;
-            justify-content: center;
+            justify-center: space-around;
         }
-
         .testimonial {
             width: 45%;
             margin: 15px;
-            padding: 20px;
-            border: 1px solid #eee;
+            padding: 30px;
+            background-color: #fff;
+            border-left: 5px solid var(--primary-color); /* Destaque lateral */
             border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             text-align: left;
+            transition: transform 0.3s ease;
         }
-
+        .testimonial:hover {
+            transform: translateY(-5px); /* Efeito ao passar o mouse */
+        }
         .testimonial img {
             width: 50px;
             height: 50px;
             border-radius: 50%;
             margin-right: 10px;
             vertical-align: middle;
+            border: 2px solid var(--secondary-color);
         }
-
         .testimonial span {
-            font-weight: bold;
+            font-weight: 700;
             display: inline-block;
             margin-bottom: 5px;
+            color: var(--text-color);
         }
-
         .testimonial p {
             font-style: italic;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            margin-top: 15px;
         }
-
         .steps-container {
             display: flex;
             justify-content: space-around;
-            align-items: center;
+            align-items: flex-start;
             flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
         }
-
         .step {
             width: 200px;
             padding: 20px;
@@ -196,465 +206,459 @@
             border-radius: 8px;
             text-align: center;
             margin: 20px;
+            background-color: #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
-
         .step i {
-            font-size: 2rem;
+            font-size: 2.5rem; /* Ícones maiores */
             color: var(--primary-color);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            background-color: #f0f3ff;
+            padding: 15px;
+            border-radius: 50%;
         }
-
         .bonus-list {
             list-style: none;
             padding: 0;
             margin: 0;
+            max-width: 700px;
+            margin: 0 auto;
         }
-
         .bonus-list li {
             margin-bottom: 15px;
             text-align: left;
             padding: 20px;
             border: 1px solid #ddd;
             border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            display: flex;
+            align-items: center;
         }
-
-        .bonus-list li strong {
-            font-weight: bold;
+        .bonus-list li i {
+            font-size: 1.8rem;
             color: var(--secondary-color);
+            margin-right: 15px;
         }
-
+        .bonus-list li strong {
+            font-weight: 700;
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 5px;
+        }
+        .bonus-list li span {
+            font-weight: 400;
+            color: var(--text-color);
+        }
         .price-table {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
         }
-
         .price-card {
-            width: 300px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+            width: 320px;
+            padding: 30px;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
             margin: 20px;
             text-align: center;
+            background-color: #fff;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
         }
-
         .price-card.popular {
             border-color: var(--primary-color);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15), 0 0 0 5px #c7d2fe; /* Borda de destaque */
+            transform: scale(1.05);
         }
-
         .price-card h4 {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
         }
-
         .price {
-            font-size: 2rem;
-            font-weight: bold;
+            font-size: 2.5rem; /* Preço maior */
+            font-weight: 800;
             color: var(--primary-color);
+            margin-bottom: 20px;
         }
-
+        .tag-popular {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
         .faq-container {
             text-align: left;
+            max-width: 800px;
+            margin: 0 auto;
         }
-
         .faq-item {
             margin-bottom: 15px;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
+            background-color: #fff;
         }
-
         .faq-question {
-            padding: 15px;
+            padding: 18px;
             background-color: #f9f9f9;
             cursor: pointer;
             position: relative;
+            font-weight: 600;
+            color: var(--text-color);
         }
-
         .faq-question:after {
-            content: '\f054';
+            content: '\f054'; /* Ícone de seta direita */
             font-family: FontAwesome;
             position: absolute;
             right: 15px;
             top: 50%;
-            transform: translateY(-50%);
+            transform: translateY(-50%) rotate(90deg);
+            transition: transform 0.3s ease;
+            color: var(--primary-color);
         }
-
         .faq-question.active:after {
-            content: '\f078';
+            transform: translateY(-50%) rotate(270deg); /* Ícone girado */
         }
-
         .faq-answer {
-            padding: 15px;
+            padding: 15px 18px;
             display: none;
+            color: #4b5563;
         }
-
         footer {
-            background-color: #f9f9f9;
+            background-color: #1f2937; /* Fundo escuro profissional */
             padding: 20px 0;
             text-align: center;
             font-size: 0.8rem;
-            color: #777;
+            color: #a1a1aa;
         }
-
+        footer a {
+            color: #a1a1aa;
+            text-decoration: none;
+        }
         .trust-badges {
-            margin-top: 20px;
+            margin: 40px 0;
+            text-align: center;
         }
-
         .trust-badges img {
-            height: 40px;
-            margin: 0 10px;
+            height: 50px; /* Maior destaque */
+            margin: 0 15px;
+            filter: grayscale(10%);
         }
-
-        /* Estilos Responsivos */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 10px;
-                min-width: auto;
-            }
-
-            section {
-                padding: 60px 0;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            h2 {
-                font-size: 1.7rem;
-            }
-
-            .testimonial-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .testimonial {
-                width: 90%;
-            }
-
-            .steps-container {
-                flex-direction: column;
-            }
-
-            .step {
-                width: 80%;
-            }
-
-            .price-table {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .price-card {
-                width: 90%;
-            }
+        /* BARRA DE URGÊNCIA (NOVO) */
+        .urgency-bar {
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 700;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-
+        .urgency-bar strong {
+            color: #ffeb3b; /* Amarelo para destaque */
+        }
         /* Notificações Fakes */
         .notification {
+            /* ... (Manter o estilo original) ... */
             position: fixed;
             bottom: 20px;
             left: 20px;
             background-color: #fff;
-            border: 1px solid #ddd;
+            border: 1px solid var(--primary-color); /* Borda com cor primária */
             border-radius: 8px;
             padding: 15px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
             display: none;
             z-index: 1000;
+            animation: fadeIn 0.5s;
         }
-
-        .notification p {
-            margin: 0;
-            font-size: 0.9rem;
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateX(-20px);}
+            to {opacity: 1; transform: translateX(0);}
         }
-
         /* Chat Simulado */
         .chat-container {
             margin-top: 30px;
             border: 1px solid #ddd;
             border-radius: 8px;
             overflow: hidden;
+            background-color: #fff;
+            max-width: 600px;
+            margin: 40px auto;
         }
-
         .chat-header {
-            background-color: #f0f0f0;
-            padding: 10px;
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 15px;
             text-align: left;
-            font-weight: bold;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
         }
-
+        .chat-header i {
+            margin-right: 10px;
+        }
         .chat-messages {
-            padding: 10px;
-            height: 200px;
+            padding: 15px;
+            height: 250px; /* Maior */
             overflow-y: scroll;
             text-align: left;
+            border-bottom: 1px solid #eee;
         }
-
         .message {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
-
         .message img {
             width: 30px;
             height: 30px;
             border-radius: 50%;
             vertical-align: middle;
             margin-right: 5px;
+            border: 1px solid #ccc;
         }
-
         .message span {
-            font-size: 0.9rem;
-        }
-
-        .chat-input {
-            padding: 10px;
-            background-color: #f9f9f9;
-        }
-
-        .chat-input input {
-            width: 80%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        .chat-input button {
-            padding: 8px 15px;
-            background-color: var(--primary-color);
-            color: #fff;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        .chat-input button:hover {
-            background-color: var(--secondary-color);
-        }
-
-        .ver-mais-btn {
+            font-size: 0.95rem;
+            background-color: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 15px;
             display: inline-block;
-            padding: 10px 20px;
-            background-color: var(--primary-color);
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
         }
-
-        .ver-mais-btn:hover {
-            background-color: var(--secondary-color);
+        /* Resposividade */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 10px;
+                min-width: auto;
+            }
+            h1 {
+                font-size: 2.2rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .testimonial {
+                width: 90%;
+            }
+            .price-card {
+                width: 90%;
+            }
+            .steps-container {
+                flex-direction: column;
+            }
+            .step {
+                width: 90%;
+            }
         }
-
-        .hidden {
-            display: none;
-        }
-
     </style>
 </head>
 <body>
 
-<div class="container">
-
-    <section id="hero">
-        <h1>Domine a Arte da Sedução: Desvende os Segredos da PNL e Conquiste a Mulher dos Seus Sonhos</h1>
-        <p>Cansado de ser ignorado? Descubra como usar o poder da Programação Neurolinguística para despertar o interesse e a atração em qualquer mulher, mesmo que você se considere "sem sorte" no amor.</p>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/jYmgueZnWEs?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <a href="https://app.paydb.com.br/pay/pdbMb6lahN5dSin" class="btn">QUERO TRANSFORMAR MINHA VIDA AMOROSA AGORA!</a>
-    </section>
-
-    <section id="dor">
-        <h2>Você se identifica com algum desses problemas?</h2>
-        <ul class="problem-list">
-            <li>Você se sente inseguro e sem confiança ao abordar uma mulher?</li>
-            <li>Tem medo da rejeição e evita iniciar conversas?</li>
-            <li>Não sabe como manter uma conversa interessante e envolvente?</li>
-            <li>Sente que as mulheres te veem apenas como "amigo"?</li>
-        </ul>
-    </section>
-
-    <section id="solucao">
-        <h2>Apresentamos o <strong>Sedução Viral</strong>: O Método Revolucionário para Ativar seu Poder de Atração</h2>
-        <p>Com o Sedução Viral, você vai aprender as técnicas secretas da PNL para:</p>
-        <ul class="benefit-list">
-            <li><strong>Aumentar sua autoconfiança</strong> e se sentir irresistível.</li>
-            <li><strong>Quebrar o gelo</strong> e iniciar conversas com qualquer mulher, sem medo.</li>
-            <li><strong>Criar conexões profundas</strong> e despertar o interesse genuíno.</li>
-            <li><strong>Dominar a linguagem corporal</strong> e a comunicação não verbal da sedução.</li>
-            <li><strong>Construir um magnetismo pessoal</strong> que atrai as mulheres naturalmente.</li>
-        </ul>
-    </section>
-
-    <section id="depoimentos">
-        <h2>O que os Alunos Estão Dizendo:</h2>
-        <div class="testimonial-container">
-            <div class="testimonial">
-                <img src="https://i.pravatar.cc/300?img=1" alt="João Silva">
-                <span>João Silva, 28 anos</span>
-                <p>"Antes do Sedução Viral, eu era um completo fracasso com as mulheres. Em poucas semanas, aprendi a me sentir mais confiante e a usar a PNL para criar conexões incríveis. Já estou namorando uma mulher maravilhosa!"</p>
-            </div>
-            <div class="testimonial">
-                <img src="https://i.pravatar.cc/300?img=2" alt="Pedro Alves">
-                <span>Pedro Alves, 32 anos</span>
-                <p>"Eu era muito tímido e inseguro. O Sedução Viral me deu as ferramentas para superar meus medos e me tornar um homem mais atraente. Recomendo a todos que querem melhorar sua vida amorosa!"</p>
-            </div>
-            <div class="testimonial hidden">
-                <img src="https://i.pravatar.cc/300?img=3" alt="Lucas Santos">
-                <span>Lucas Santos, 25 anos</span>
-                <p>"As técnicas de PNL do Sedução Viral são incríveis! Aprendi a criar rapport, a usar gatilhos mentais e a despertar o interesse das mulheres. Minha vida amorosa mudou completamente!"</p>
-            </div>
-            <div class="testimonial hidden">
-                <img src="https://i.pravatar.cc/300?img=4" alt="Felipe Oliveira">
-                <span>Felipe Oliveira, 35 anos</span>
-                <p>"Eu já tinha tentado de tudo para melhorar minha vida amorosa, mas nada funcionava. O Sedução Viral foi a única coisa que realmente fez a diferença. Agora, eu me sinto confiante e atraente!"</p>
-            </div>
-            <div class="testimonial hidden">
-                <img src="https://i.pravatar.cc/300?img=5" alt="Gustavo Pereira">
-                <span>Gustavo Pereira, 29 anos</span>
-                <p>"O Sedução Viral me ensinou a me comunicar de forma mais eficaz, a entender as necessidades das mulheres e a criar conexões genuínas. Estou muito feliz com os resultados!"</p>
-            </div>
-            <div class="testimonial hidden">
-                <img src="https://i.pravatar.cc/300?img=6" alt="Ricardo Martins">
-                <span>Ricardo Martins, 31 anos</span>
-                <p>"Eu era muito inseguro e tinha medo da rejeição. O Sedução Viral me ajudou a superar meus medos e a me tornar um homem mais confiante e atraente. Recomendo a todos!"</p>
-            </div>
-        </div>
-        <button class="ver-mais-btn" id="verMaisBtn">Ver Mais</button>
-    </section>
-
-    <section id="como-funciona">
-        <h2>Como Funciona o Sedução Viral:</h2>
-        <div class="steps-container">
-            <div class="step">
-                <i class="fas fa-sign-in-alt"></i>
-                <h3>Passo 1</h3>
-                <p>Acesse a plataforma e comece a aprender as técnicas de PNL.</p>
-            </div>
-            <div class="step">
-                <i class="fas fa-handshake"></i>
-                <h3>Passo 2</h3>
-                <p>Aplique as técnicas em situações reais e observe os resultados.</p>
-            </div>
-            <div class="step">
-                <i class="fas fa-heart"></i>
-                <h3>Passo 3</h3>
-                <p>Conecte-se com mulheres incríveis e construa relacionamentos duradouros.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="bonus">
-        <h2>Bônus Exclusivos para os Alunos do Sedução Viral:</h2>
-        <ul class="bonus-list">
-            <li><strong>E-book:</strong> "Os 7 Segredos da Linguagem Corporal Irresistível" (Valor: R$97)</li>
-            <li><strong>Áudio:</strong> "Sessão de Hipnose para Aumentar a Autoconfiança" (Valor: R$79)</li>
-            <li><strong>Grupo VIP:</strong> Acesso à comunidade exclusiva de alunos para trocar experiências e tirar dúvidas (Valor Inestimável)</li>
-        </ul>
-    </section>
-
-    <section id="precos">
-        <h2>Escolha o Plano Ideal para Você:</h2>
-        <div class="price-table">
-            <div class="price-card">
-                <h4>Plano Básico</h4>
-                <p class="price">R$97</p>
-                <p>Acesso vitalício ao curso Sedução Viral</p>
-                <a href="https://app.paydb.com.br/pay/pdbMb6lahN5dSin" class="btn">COMEÇAR AGORA</a>
-            </div>
-            <div class="price-card popular">
-                <h4>Plano Premium (Mais Popular)</h4>
-                <p class="price">R$147</p>
-                <p>Acesso vitalício + Bônus Exclusivos + Grupo VIP</p>
-                <a href="https://app.paydb.com.br/pay/pdbMb6lahN5dSin" class="btn">QUERO O PLANO PREMIUM</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="garantia">
-        <h2>GARANTIA INCONDICIONAL DE 7 DIAS</h2>
-        <img src="https://cdn.shopify.com/s/files/1/0274/5838/3164/files/selo-de-garantia-7-dias.png?v=1643384571" alt="Garantia de 7 dias" style="max-width: 150px;">
-        <p>Sua satisfação é nossa prioridade. Se, por qualquer motivo, você não estiver satisfeito com o Sedução Viral, devolvemos 100% do seu dinheiro. Risco ZERO para você!</p>
-    </section>
-
-    <section id="faq">
-        <h2>Perguntas Frequentes:</h2>
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">O Sedução Viral funciona mesmo?</div>
-                <div class="faq-answer">Sim! O Sedução Viral é baseado em técnicas comprovadas de PNL que já ajudaram milhares de homens a transformarem suas vidas amorosas.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Preciso ter alguma experiência com PNL para fazer o curso?</div>
-                <div class="faq-answer">Não! O curso é totalmente didático e ensina tudo o que você precisa saber, mesmo que você seja um completo iniciante.</div>
-               <script src="https://disabletools.github.io/disable-tools/disable-tools.js"></script>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">Em quanto tempo terei resultados?</div>
-                <div class="faq-answer">Os resultados variam de pessoa para pessoa, mas muitos alunos já começam a ver resultados nas primeiras semanas.</div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">O curso é online ou presencial?</div>
-                <div class="faq-answer">O curso é 100% online, o que significa que você pode acessá-lo de qualquer lugar e a qualquer hora.</div>
-            </div>
-             <div class="faq-item">
-                <div class="faq-question">Quais as formas de pagamento aceitas?</div>
-                <div class="faq-answer">Aceitamos cartão de crédito, boleto bancário e PIX.</div>
-            </div>
-             <div class="faq-item">
-                <div class="faq-question">Terei suporte durante o curso?</div>
-                <div class="faq-answer">Sim! Oferecemos suporte completo aos alunos através do grupo VIP e por e-mail.</div>
-            </div>
-        </div>
-    </section>
-
-    <section id="cta-final">
-        <h2>Não perca mais tempo! Transforme sua vida amorosa agora mesmo!</h2>
-        <p>Aproveite esta oportunidade única de aprender as técnicas secretas da PNL e se tornar um mestre da sedução. Vagas limitadas!</p>
-        <a href="https://app.paydb.com.br/pay/pdbMb6lahN5dSin" class="btn">GARANTIR MINHA VAGA AGORA!</a>
-    </section>
-
-    <div class="trust-badges">
-        <img src="https://www.pngmart.com/files/11/100%25-Money-Back-Guarantee-PNG-Transparent-Image.png" alt="Pagamento Seguro" style="max-width: 100px;">
-        <img src="https://www.pngmart.com/files/7/SSL-Secure-PNG-Image.png" alt="Satisfação Garantida" style="max-width: 100px;">
+    <div class="urgency-bar">
+        ⚠️ **ÚLTIMAS 7 VAGAS** com preço promocional. A oferta termina em <span id="timer">00:00:00</span>!
     </div>
 
-    <div class="chat-container">
-        <div class="chat-header">
-            Bate-papo ao vivo
-        </div>
-        <div class="chat-messages" id="chatMessages">
-            <div class="message">
-                <img src="https://i.pravatar.cc/300?img=7" alt="User 1">
-                <span><strong>Maria:</strong> Alguém já teve resultados rápidos com esse curso?</span>
+    <div class="container">
+        
+        <section id="hero">
+            <h1>**Sedução Viral:** Domine a Arte da Sedução com PNL e Conquiste a Mulher dos Seus Sonhos</h1>
+            <p>Cansado de ser ignorado? Descubra como usar o poder da Programação Neurolinguística para despertar o interesse e a atração em qualquer mulher, mesmo que você se considere "sem sorte" no amor.</p>
+            
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/jYmgueZnWEs?rel=0&modestbranding=1&showinfo=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <div class="message">
-                <img src="https://i.pravatar.cc/300?img=8" alt="User 2">
-                <span><strong>José:</strong> Eu comecei a aplicar as técnicas e já senti uma diferença na minha confiança!</span>
+            
+            <a href="https://app.paydb.com.br/pay/pdbMb6lahN5dSin" class="btn">QUERO DESBLOQUEAR MEU MAGNETISMO AGORA!</a>
+        </section>
+
+        <section id="dor">
+            <h2>**Chega de Ser o 'Amigo'** – Você está cansado de se sentir assim?</h2>
+            <ul class="problem-list">
+                <li>Você se sente **inseguro e sem confiança** ao abordar uma mulher?</li>
+                <li>Tem **medo da rejeição** e evita iniciar conversas com quem te interessa?</li>
+                <li>Não sabe como manter uma conversa **interessante e envolvente**?</li>
+                <li>Sente que as mulheres te veem apenas como **"bom amigo"** ou te ignoram?</li>
+            </ul>
+        </section>
+
+        <section id="ponte">
+            <h2 style="color: var(--secondary-color);">🔥 A BOA NOTÍCIA: O Magnetismo Pessoal É uma HABILIDADE que Você Pode Instalar.</h2>
+            <p style="max-width: 700px; margin: 0 auto; font-style: italic;">Não é sobre ser bonito ou rico. É sobre **comunicação, confiança e a ciência da atração**. Apresentamos o método que vai reescrever sua programação mental.</p>
+        </section>
+
+        <section id="solucao">
+            <h2>Apresentamos o **Sedução Viral**: O Método de PNL para Ativar seu Poder de Atração</h2>
+            <p>Com as técnicas secretas da PNL (Programação Neurolinguística), você vai **instalar padrões de excelência** e:</p>
+            <ul class="benefit-list">
+                <li>✅ **Conquiste Confiança Inabalável** para abordar qualquer mulher, em qualquer situação.</li>
+                <li>✅ **Quebre o Gelo e Crie Rapport** instantaneamente, tornando-se memorável.</li>
+                <li>✅ **Domine a Linguagem Corporal da Sedução** e transmita poder e atração sem dizer uma palavra.</li>
+                <li>✅ **Crie Conexões Profundas e Genuínas**, transformando um flerte em um relacionamento real.</li>
+                <li>✅ **Construa um Magnetismo Pessoal** que fará as mulheres virem até você, naturalmente.</li>
+            </ul>
+        </section>
+
+        <section id="depoimentos">
+            <h2>Resultados Reais: **A Transformação na Vida dos Nossos Alunos**</h2>
+            <div class="testimonial-container">
+                <div class="testimonial">
+                    <img src="https://i.pravatar.cc/300?img=1" alt="João Silva">
+                    <span>João Silva, 28 anos (Novo Namorado)</span>
+                    <p>"Antes do Sedução Viral, eu era um completo fracasso com as mulheres. Em poucas semanas, aprendi a me sentir mais confiante e a usar a PNL para criar conexões incríveis. Já estou namorando uma mulher maravilhosa!"</p>
+                </div>
+                <div class="testimonial">
+                    <img src="https://i.pravatar.cc/300?img=2" alt="Pedro Alves">
+                    <span>Pedro Alves, 32 anos (Mais Atraente)</span>
+                    <p>"Eu era muito tímido e inseguro. O Sedução Viral me deu as ferramentas para superar meus medos e me tornar um homem mais atraente. Recomendo a todos que querem melhorar sua vida amorosa!"</p>
+                </div>
+                <div class="testimonial hidden">
+                    <img src="https://i.pravatar.cc/300?img=3" alt="Lucas Santos">
+                    <span>Lucas Santos, 25 anos (Aumento de Contatos)</span>
+                    <p>"As técnicas de PNL do Sedução Viral são incríveis! Aprendi a criar rapport, a usar gatilhos mentais e a despertar o interesse das mulheres. Minha vida amorosa mudou completamente!"</p>
+                </div>
+                <div class="testimonial hidden">
+                    <img src="https://i.pravatar.cc/300?img=4" alt="Felipe Oliveira">
+                    <span>Felipe Oliveira, 35 anos (Confiança Renovada)</span>
+                    <p>"Eu já tinha tentado de tudo para melhorar minha vida amorosa, mas nada funcionava. O Sedução Viral foi a única coisa que realmente fez a diferença. Agora, eu me sinto confiante e atraente!"</p>
+                </div>
             </div>
-            <div class="message">
-                <img src="https://i.pravatar.cc/300?img=9" alt="User 3">
-                <span><strong>Ana:</strong> Estou pensando em comprar, mas tenho medo de não funcionar para mim...</span>
+            <button class="ver-mais-btn" id="verMaisBtn">Ver Mais Depoimentos</button>
+        </section>
+
+        <section id="como-funciona">
+            <h2>Simples e Prático: **A Metodologia Sedução Viral**</h2>
+            <p>O método foi desenhado para ser aplicado imediatamente, com apenas 3 passos:</p>
+            <div class="steps-container">
+                <div class="step">
+                    <i class="fas fa-brain"></i>
+                    <h3>1. Reprograme Sua Mente</h3>
+                    <p>Aprenda os módulos de PNL para instalar os padrões de pensamento e comportamento dos homens mais atraentes.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-bolt"></i>
+                    <h3>2. Ação e Teste Rápido</h3>
+                    <p>Aplique os "Gatilhos Virais" em interações reais e observe a reação imediata das mulheres.</p>
+                </div>
+                <div class="step">
+                    <i class="fas fa-trophy"></i>
+                    <h3>3. Conquista e Sucesso</h3>
+                    <p>Aproveite sua nova autoconfiança e magnetismo para iniciar e manter relacionamentos incríveis.</p>
+                </div>
             </div>
-            <div class="message">
-                <img src="https://i.pravatar.cc/300?img=10" alt="User 4">
-                <span><strong>Carlos:</strong> Ana, a garantia de 7 dias te dá segurança para testar! Eu aproveitei e não me arrependi.</span>
+        </section>
+        
+        <section id="bonus">
+            <h2>Valor Inestimável: **Bônus Exclusivos de Lançamento**</h2>
+            <ul class="bonus-list">
+                <li><i class="fas fa-book-open"></i><strong>E-book: "Os 7 Segredos da Linguagem Corporal Irresistível"</strong> (Valor: R$97) <span>Domine a comunicação silenciosa que te diferencia de 99% dos homens.</span></li>
+                <li><i class="fas fa-microphone-alt"></i><strong>Áudio: "Sessão de Hipnose para Aumentar a Autoconfiança"</strong> (Valor: R$79) <span>Instale a confiança diretamente no seu subconsciente, sem esforço.</span></li>
+                <li><i class="fas fa-users"></i><strong>Grupo VIP: Comunidade Exclusiva de Alunos</strong> (Valor Inestimável) <span>Acesso ilimitado ao suporte direto do mentor e à troca de experiências com outros alunos.</span></li>
+            </ul>
+            <p style="margin-top: 30px; font-weight: 600; color: var(--accent-color);">🚨 Os bônus são liberados apenas no Plano Premium e serão removidos em breve!</p>
+        </section>
+
+        <section id="precos">
+            <h2>Escolha o Plano Ideal e Comece Sua Transformação Hoje:</h2>
+            <div class="price-table">
+                <div class="price-card">
+                    <h4>Plano Básico</h4>
+                    <p>Acesso vitalício ao curso Sedução Viral</p>
+                    <p class="price">R$97</p>
+                    <a href="https://app.paydb.com.br/pay/pdbMb6lahN5dSin" class="btn">COMEÇAR AGORA</a>
+                </div>
+                <div class="price-card popular">
+                    <div class="tag-popular">MAIS ESCOLHIDO</div>
+                    <h4>Plano Premium + Bônus</h4>
+                    <p>Acesso vitalício + Bônus Exclusivos + Grupo VIP</p>
+                    <p class="price" style="color: var(--secondary-color);">R$147</p>
+                    <a href="https://app.paydb.com.br/pay/pdbMb6lahN5dSin" class="btn">QUERO O PLANO PREMIUM</a>
+                </div>
             </div>
-            <div class="message">
-                <img src="https://i.pravatar.cc/300?img=11" alt="User 5">
-                <span><strong>Fernanda:</strong> As técnicas de PNL são muito poderosas, vale a pena o investimento!</span>
+        </section>
+        
+        <section id="garantia">
+            <h2 style="color: var(--primary-color);">RISCO ZERO: GARANTIA INCONDICIONAL DE 7 DIAS</h2>
+            <img src="https://cdn.shopify.com/s/files/1/0274/5838/3164/files/selo-de-garantia-7-dias.png?v=1643384571" alt="Garantia de 7 dias" style="max-width: 150px; margin-bottom: 20px;">
+            <p>Sua satisfação é nossa prioridade. Se, por qualquer motivo, você não sentir que o Sedução Viral é para você, **devolvemos 100% do seu investimento**. Você tem 7 dias para testar, sem perguntas.</p>
+        </section>
+
+        <section id="faq">
+            <h2>Ainda com Dúvidas? Perguntas Frequentes:</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">O Sedução Viral funciona mesmo?</div>
+                    <div class="faq-answer">Sim! O Sedução Viral é baseado em técnicas comprovadas de PNL que já ajudaram milhares de homens a transformarem suas vidas amorosas. O foco não é em truques, mas em reprogramar sua confiança e comunicação.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Preciso ter alguma experiência com PNL para fazer o curso?</div>
+                    <div class="faq-answer">Não! O curso é totalmente didático e ensina tudo o que você precisa saber do zero, focando apenas nas aplicações práticas para a sedução.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Em quanto tempo terei resultados?</div>
+                    <div class="faq-answer">Muitos alunos relatam um aumento imediato na autoconfiança e resultados práticos nas primeiras semanas de aplicação, dependendo da sua dedicação.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">O curso é online ou presencial?</div>
+                    <div class="faq-answer">O curso é 100% online, com acesso vitalício. Você pode acessá-lo no seu celular, tablet ou computador, de qualquer lugar e a qualquer hora.</div>
+                </div>
+                 <div class="faq-item">
+                    <div class="faq-question">Terei suporte durante o curso?</div>
+                    <div class="faq-answer">Sim! No Plano Premium, você tem acesso ao nosso grupo VIP exclusivo para tirar dúvidas e receber mentoria com outros alunos e o criador do curso.</div>
+                </div>
             </div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
-            <button onclick="sendMessage()">Enviar</button>
-        </div>
-    </div>
+        </section>
+        
+        <section id="cta-final">
+            <h2 style="color: var(--secondary-color);">Não perca a última chance! Transforme sua vida amorosa hoje!</h2>
+            <p>Aproveite o preço de lançamento e os bônus exclusivos. O preço vai subir em breve.</p>
+            <a href="https://app.paydb.com.br/pay/pdbMb6lahN5dSin" class="btn">GARANTIR MEU ACESSO E BÔNUS AGORA!</a>
+            
+            <div class="trust-badges">
+                <img src="https://www.pngmart.com/files/11/100%25-Money-Back-Guarantee-PNG-Transparent-Image.png" alt="Satisfação Garantida" style="max-width: 100px;">
+                <img src="https://www.pngmart.com/files/7/SSL-Secure-PNG-Image.png" alt="Pagamento Seguro" style="max-width: 100px;">
+            </div>
+        </section>
+
+        <section id="chat-container-section" style="padding-top: 0;">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <i class="fas fa-comment-dots"></i> Bate-papo ao vivo (123 pessoas online)
+                </div>
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message">
+                        <img src="https://i.pravatar.cc/300?img=7" alt="User 1">
+                        <span><strong>Maria:</strong> Alguém já teve resultados rápidos com esse curso?</span>
+                    </div>
+                    <div class="message">
+                        <img src="https://i.pravatar.cc/300?img=8" alt="User 2">
+                        <span><strong>José:</strong> Eu comecei a aplicar as técnicas e já senti uma diferença na minha confiança!</span>
+                    </div>
+                    <div class="message">
+                        <img src="https://i.pravatar.cc/300?img=9" alt="User 3">
+                        <span><strong>Ana:</strong> Estou pensando em comprar, mas tenho medo de não funcionar para mim...</span>
+                    </div>
+                    <div class="message">
+                        <img src="https://i.pravatar.cc/300?img=10" alt="User 4">
+                        <span><strong>Carlos:</strong> Ana, a garantia de 7 dias te dá segurança para testar! Eu aproveitei e não me arrependi.</span>
+                    </div>
+                    <div class="message">
+                        <img src="https://i.pravatar.cc/300?img=11" alt="User 5">
+                        <span><strong>Fernanda:</strong> As técnicas de PNL são muito poderosas, vale a pena o investimento!</span>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="Digite sua mensagem...">
+                    <button onclick="sendMessage()">Enviar</button>
+                </div>
+            </div>
+        </section>
 
     </div>
 
@@ -663,45 +667,64 @@
         <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Após você sair do Facebook, a responsabilidade não é deles e sim do nosso site.</p>
         <p><a href="#">Políticas de Privacidade</a> | <a href="#">Termos de Uso</a></p>
     </footer>
-
+    
     <div class="notification" id="notification">
-        <p><strong>[Nome]</strong> acaba de adquirir o Sedução Viral!</p>
+        <p><i class="fas fa-check-circle" style="color: var(--primary-color);"></i> **[Nome]** acaba de adquirir o Sedução Viral!</p>
     </div>
 
 <script>
+    // TIMER DE URGÊNCIA (NOVO)
+    function startTimer(duration, display) {
+        let timer = duration, hours, minutes, seconds;
+        setInterval(function () {
+            hours = parseInt(timer / 3600, 10);
+            minutes = parseInt((timer % 3600) / 60, 10);
+            seconds = parseInt(timer % 60, 10);
+
+            hours = hours < 10 ? "0" + hours : hours;
+            minutes = minutes < 10 ? "0" + minutes : minutes;
+            seconds = seconds < 10 ? "0" + seconds : seconds;
+
+            display.textContent = hours + ":" + minutes + ":" + seconds;
+
+            if (--timer < 0) {
+                timer = duration; // Reinicia o timer para um novo ciclo de urgência
+            }
+        }, 1000);
+    }
+
+    window.onload = function () {
+        // 3 horas e 30 minutos em segundos (12600 segundos)
+        const threeHoursAndHalf = 60 * 60 * 3.5; 
+        const display = document.querySelector('#timer');
+        startTimer(threeHoursAndHalf, display);
+    };
+
     // Notificações Fakes
     function showNotification() {
-        const names = ["João", "Maria", "José", "Ana", "Carlos", "Fernanda", "Lucas", "Patricia"];
+        const names = ["João S.", "Maria A.", "José B.", "Ana C.", "Carlos D.", "Fernanda E.", "Lucas F.", "Patricia G."];
         const randomName = names[Math.floor(Math.random() * names.length)];
         const notification = document.getElementById("notification");
         notification.querySelector("p strong").innerText = randomName;
         notification.style.display = "block";
-
-        // Tocar som de notificação
-        const audio = new Audio("https://actions.google.com/sounds/v1/alarms/beep_short.ogg");
-        audio.play();
-
+        
         setTimeout(() => {
             notification.style.display = "none";
         }, 5000);
     }
-
-    setInterval(showNotification, 30000); // Mostrar notificação a cada 30 segundos
+    setInterval(showNotification, 20000); // Mostrar notificação a cada 20 segundos
 
     // Chat Simulado
     function sendMessage() {
         const messageInput = document.getElementById("messageInput");
         const chatMessages = document.getElementById("chatMessages");
         const messageText = messageInput.value;
-
         if (messageText.trim() !== "") {
             const newMessage = document.createElement("div");
             newMessage.classList.add("message");
             newMessage.innerHTML = `<img src="https://i.pravatar.cc/300?img=12" alt="You"><span><strong>Você:</strong> ${messageText}</span>`;
             chatMessages.appendChild(newMessage);
             messageInput.value = "";
-
-            // Rolar para a parte inferior do chat
             chatMessages.scrollTop = chatMessages.scrollHeight;
         }
     }
@@ -724,25 +747,23 @@
     const verMaisBtn = document.getElementById("verMaisBtn");
     const depoimentos = document.querySelectorAll(".testimonial.hidden");
     let todosVisiveis = false;
-
     verMaisBtn.addEventListener("click", () => {
         if (!todosVisiveis) {
             depoimentos.forEach(depoimento => {
+                depoimento.classList.remove("hidden");
                 depoimento.style.display = "block";
             });
-            verMaisBtn.innerText = "Ver Menos";
+            verMaisBtn.innerText = "Ver Menos Depoimentos";
             todosVisiveis = true;
         } else {
-            depoimentos.forEach((depoimento, index) => {
-                if (index >= 2) { // Mantém os dois primeiros visíveis
-                    depoimento.style.display = "none";
-                }
+            depoimentos.forEach(depoimento => {
+                depoimento.classList.add("hidden");
+                depoimento.style.display = "none";
             });
-            verMaisBtn.innerText = "Ver Mais";
+            verMaisBtn.innerText = "Ver Mais Depoimentos";
             todosVisiveis = false;
         }
     });
 </script>
-
 </body>
 </html>
